@@ -267,6 +267,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 897944103012139726, guid: 207992eb1e36c2f4c980b153a0ada1f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 897944103012139727, guid: 207992eb1e36c2f4c980b153a0ada1f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -351,6 +356,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 808d60b304ea3e34c93dd251cb6c91b3,
         type: 2}
+    - target: {fileID: 897944103012139724, guid: 207992eb1e36c2f4c980b153a0ada1f0,
+        type: 3}
+      propertyPath: Looping
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 207992eb1e36c2f4c980b153a0ada1f0, type: 3}
 --- !u!1001 &2778327001481702950
@@ -743,5 +753,6 @@ PrefabInstance:
       propertyPath: ProjectileCooldown
       value: 0.2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 344933664533445567, guid: 9fa93cfe3476d6246b28e6ccc2b5c428, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9fa93cfe3476d6246b28e6ccc2b5c428, type: 3}
