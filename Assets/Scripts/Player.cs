@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-	[SerializeField] float MoveSpeed = 10f;
+	[Header("Player")]
+	[SerializeField] readonly float MoveSpeed = 10f;
 	[SerializeField] float Padding = 1f;
+	[SerializeField] float Health = 1000f;
+
+	[Header("Projectile")]
 	[SerializeField] GameObject LaserPrefab;
 	[SerializeField] float ProjectileSpeed = 10f;
 	[SerializeField] float ProjectileCooldown = 0.2f;
@@ -70,5 +74,23 @@ public class Player : MonoBehaviour
 		var newYPos = Mathf.Clamp(this.transform.position.y + deltaY, _yMin, _yMax);
 
 		this.transform.position = new Vector2(newXPos, newYPos);
+	}
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		var damageDealer = other.gameObject.GetComponent<DamageDealer>();
+		if (damageDealer != null)
+		{
+			ProcessHit(damageDealer);
+		}
+	}
+
+	private void ProcessHit(DamageDealer damageDealer)
+	{
+		this.Health -= damageDealer.GetDamage();
+		if (this.Health <= 0)
+		{
+			Destroy(this.gameObject);
+		}
 	}
 }

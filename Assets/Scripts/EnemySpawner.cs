@@ -40,10 +40,4 @@ public class EnemySpawner : MonoBehaviour
 			yield return new WaitForSeconds(currentWave.GetTimeBetweeenSpawns());
 		}
 	}
-
-	// Update is called once per frame
-	void Update()
-    {
-        
-    }
 }

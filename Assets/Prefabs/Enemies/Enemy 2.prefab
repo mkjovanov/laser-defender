@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3945850611097089956}
   - component: {fileID: 3541190373844456763}
   - component: {fileID: 5456651253011404823}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,6 +108,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
+  ShotCooldown: 0
+  MinShotCooldown: 0.2
+  MaxShotCooldown: 3
+  Projectile: {fileID: 5037594700824234241, guid: 3eac268282042bd459dd3d53cc960d33,
+    type: 3}
+  ProjectileSpeed: 10
+  IsShooting: 0
 --- !u!58 &5456651253011404823
 CircleCollider2D:
   m_ObjectHideFlags: 0
